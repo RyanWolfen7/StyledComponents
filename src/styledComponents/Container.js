@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-export const Container = (props) => {
+export const container = (props) => {
   const { content, gridThreeSplit, gridWaffel, backgroundColor, color } = props
   const styles = { backgroundColor, color }
   let Div = ''

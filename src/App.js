@@ -1,13 +1,19 @@
 import React from 'react';
-import { Container } from './styledComponents/Container'
-import { Header } from './styledComponents/Header'
+import { Container, Header, Button } from './styledComponents/__Controller'
 
 function App() {
+
+  const content = (<>
+    <Header backgroundColor='red' color='white' logo='Logo' logoLeft content={<Button label={'A'} />} />
+    <Button label={'B'} />
+    <Button label={'C'} />
+    <Button label={'D'} />
+  </>)
 
   return (
     <Container
       gridThreeSplit
-      content={<><Header backgroundColor='red' color='white' logoRight /></>}
+      content={content}
     />
   );
 }

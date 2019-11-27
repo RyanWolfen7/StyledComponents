@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 
-export const Header = (props) => {
+export const header = (props) => {
   const { logoLeft, logoRight, logo, content, backgroundColor, color, bottomBorder, topBorder } = props
   const styles = { backgroundColor, color, bottomBorder, topBorder }
   let logoStyles = {}
@@ -12,8 +12,9 @@ export const Header = (props) => {
 
   return (
     <Wrapper elements={styles}>
-      <LogoWrapper elements={logoStyles}> {logo} header </LogoWrapper>
-      {content}
+      {logoRight && content}
+      <LogoWrapper elements={logoStyles}> {logo} </LogoWrapper>
+      {!logoRight && content}
     </Wrapper>
   )
 }
@@ -34,6 +35,7 @@ const Wrapper = styled.div`
 `
 
 const LogoWrapper = styled.div`
-grid-column: ${props => props.elements.gridColumn ? props.elements.gridColumn : ' 1 / 3'}
-place-self: center
+grid-column: ${props => props.elements.gridColumn ? props.elements.gridColumn : ' auto'}
+place-self: strech
+background-color: pink
 `
