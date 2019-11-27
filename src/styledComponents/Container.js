@@ -19,13 +19,11 @@ export const Container = (props) => {
 const GridThreeSplit = styled.div`
 && 
 {
+  max-width: 115rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: 
-    "header header header header"
-    ". main main sidebar"
-    "footer footer footer footer";
   background-color: ${props => props.elements.backgroundColor ? props.elements.backgroundColor : '#ffff'}
   color: ${props => props.elements.color ? props.elements.color : 'black'}
   

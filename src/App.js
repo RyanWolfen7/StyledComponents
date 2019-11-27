@@ -1,14 +1,13 @@
 import React from 'react';
 import { Container } from './styledComponents/Container'
+import { Header } from './styledComponents/Header'
 
 function App() {
 
   return (
     <Container
       gridThreeSplit
-      content={<h1> Hello World </h1>}
-      backgroundColor='red'
-      color='white'
+      content={<><Header backgroundColor='red' color='white' logoRight /></>}
     />
   );
 }
